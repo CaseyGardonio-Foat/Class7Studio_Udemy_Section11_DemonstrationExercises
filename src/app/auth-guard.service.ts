@@ -20,6 +20,9 @@ export class AuthGuard implements CanActivate, CanActivateChild {
                     }
             );
     }
+    /*the demonstration implements both canActivate and canActivateChild, but only uses canActivateChild;
+    confirmed that, in this case, only canActivateChild is necessary--it will function properly without
+    canActivate (as long as the function code currently in canActivate is moved to canActivateChild) */
     
     canActivateChild(route: ActivatedRouteSnapshot, state: RouterStateSnapshot):
     Observable<boolean> | Promise<boolean> | boolean {
